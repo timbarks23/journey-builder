@@ -1,15 +1,6 @@
-
 <template>
     <div>
-       <Header></Header>
-        <div id="journey-builder">
-            <h1>Build your journey</h1>
-            <JourneyInformation></JourneyInformation>
-            <button id="show-modal" @click="showModal = true">Generate Journey</button>
-        </div>
-        <Footer></Footer>
 
-<!--modal begin -->
         <modal id="modal" v-if="showModal" @close="showModal = false">
             <button id="hide-modal" @click="showModal = false">X</button>
             <!--
@@ -405,105 +396,15 @@
 
             </div>
         </modal>
-<!-- end of modal section -->
     </div>
 </template>
 
 <script>
-    import Header             from '@/components/Header.vue';
-    import JourneyInformation from "../components/JourneyInformation";
-    import Footer             from '@/components/Footer.vue';
-
     export default {
-        components: {
-            Header,
-            JourneyInformation,
-            Footer},
-        data : function() {
-            return {
-                showModal : false,
-            }
-        },
+        name: "JsonModal"
     }
 </script>
 
 <style scoped>
-    #journey-builder{
-        text-align:center;
-    }
-    #modal{
-        z-index: 99999;
-        position: absolute;
-        float: left;
-        top: 0;
-        background: white;
-        height: 100vh;
-        width: 80%;
-        margin-left: 5%;
-        margin-right: 5%;
-        text-align: center;
-    }
-    .modal-mask {
-        position: fixed;
-        z-index: 9998;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, .5);
-        display: table;
-        transition: opacity .3s ease;
-    }
 
-    .modal-wrapper {
-        display: table-cell;
-        vertical-align: middle;
-    }
-
-    .modal-container {
-        width: 300px;
-        margin: 0px auto;
-        padding: 20px 30px;
-        background-color: #fff;
-        border-radius: 2px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
-        transition: all .3s ease;
-        font-family: Helvetica, Arial, sans-serif;
-    }
-
-    .modal-header h3 {
-        margin-top: 0;
-        color: #42b983;
-    }
-
-    .modal-body {
-        margin: 20px 0;
-    }
-
-    .modal-default-button {
-        float: right;
-    }
-
-    /*
-     * The following styles are auto-applied to elements with
-     * transition="modal" when their visibility is toggled
-     * by Vue.js.
-     *
-     * You can easily play with the modal transition by editing
-     * these styles.
-     */
-
-    .modal-enter {
-        opacity: 0;
-    }
-
-    .modal-leave-active {
-        opacity: 0;
-    }
-
-    .modal-enter .modal-container,
-    .modal-leave-active .modal-container {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-    }
 </style>

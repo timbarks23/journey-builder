@@ -1,13 +1,13 @@
 <template>
-    $END$
+    <div id="loginform">
+        <h1>{{componentTitle}}</h1>
+        <p>{{componentText}}</p>
+    </div>
 </template>
 
-<script>
-    export default {
-        name: "LoginForm"
-    }
-</script>
+<script src="../assets/js/components/loginForm.js"></script>
 
-<style scoped>
-
+<style lang="scss">
+    @import "../assets/styles/sass/baseStyles";
+    @import "../assets/styles/sass/components/loginFormStyles";
 </style>

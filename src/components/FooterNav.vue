@@ -1,5 +1,7 @@
 <template>
-    $END$
+    <div id="footerNav">
+
+    </div>
 </template>
 
 <script>

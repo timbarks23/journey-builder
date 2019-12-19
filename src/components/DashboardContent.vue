@@ -1,13 +1,16 @@
 <template>
-    $END$
+    <div id="dashboardComponent">
+        <h3>{{componentTitle}}</h3>
+        <p>{{componentText}}</p>
+    </div>
 </template>
 
-<script>
-    export default {
-        name: "Dashboard"
+<script src="../assets/js/components/dashboardContent.js"></script>
+
+<style lang="scss">
+    @import "../assets/styles/sass/baseStyles";
+    @import "../assets/styles/sass/components/dashboardContentStyles";
+    #dashboardComponent{
+        text-align: center;
     }
-</script>
-
-<style scoped>
-
 </style>

@@ -4,7 +4,7 @@ const headerNavComponentText = {
     dashboardLinkText     : 'Dashboard',
     dashboardLink         : '/dashboard',
     viewJourneyLink       : '/view',
-    viewJourneyLinkText   : 'View all ',
+    viewJourneyLinkText   : 'View all Journeys',
     createJourneyLink     : '/build',
     createJourneyLinkText : 'Create a new Journey'
 };
