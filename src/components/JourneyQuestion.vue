@@ -1,5 +1,6 @@
 <template>
     <div>
+        <button id="add-new-question-button">Add new question</button>
         <h3>Add a journey question for the page</h3>
         <label>Question Title</label><br/>
         <input type="text" placeholder="Page Title"><br/>
@@ -26,5 +27,7 @@
 </script>
 
 <style scoped>
-
+#add-new-question-button{
+    margin-top:2%;
+}
 </style>

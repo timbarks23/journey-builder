@@ -3,14 +3,18 @@
         <h3>Journey Information</h3>
         <form>
             <lable>Journey for product</lable><br/>
-            <select>
+            <select @change="journeyPages = true">
+                <option>Select a product</option>
                 <option>Car</option>
                 <option>Van</option>
                 <option>Energy</option>
                 <option>Pet</option>
                 <option>Bike</option>
             </select>
-            <JourneyPages></JourneyPages>
+            <div v-show="journeyPages">
+                <JourneyPages></JourneyPages>
+            </div>
+
         </form>
     </div>
 </template>
@@ -20,6 +24,11 @@
     export default {
         name: "JourneyInformation",
         components : {JourneyPages},
+        data : function() {
+            return {
+                journeyPages : false,
+            }
+        },
     }
 </script>
 

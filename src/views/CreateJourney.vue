@@ -428,6 +428,9 @@
 </script>
 
 <style scoped>
+    #show-modal{
+        margin-top:2%;
+    }
     #journey-builder{
         text-align:center;
     }
